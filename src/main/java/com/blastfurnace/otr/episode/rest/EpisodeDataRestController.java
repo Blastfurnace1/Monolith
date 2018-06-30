@@ -20,7 +20,7 @@ import com.blastfurnace.otr.rest.request.QueryData;
 import com.blastfurnace.otr.service.response.GenericResponse;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/rest/series")
 public class EpisodeDataRestController {
 
 	@Autowired
