@@ -21,7 +21,7 @@ import com.blastfurnace.otr.service.payload.PayloadWithCount;
 import com.blastfurnace.otr.service.response.GenericResponse;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/rest/audio")
 public class AudioDataRestController {
 
 	@Autowired
