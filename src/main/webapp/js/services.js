@@ -29,6 +29,6 @@ angular.module('otrService', ['ngResource']).
 	}).factory('OTREpisodeDataCount', function($resource){
 	  return $resource('/otr-episode-data/rest/episode/resultsCount/:id', {id: '@_id'});
 	}).factory('OTRFileServices', function($resource){
-	  return $resource('/otr-file-services/rest/episode/:method/:id', {method: '@_method', id: '@_id'});
+	  return $resource('/otr-file-services/rest/file/:method/:id', {method: '@_method', id: '@_id'});
 	});
 
