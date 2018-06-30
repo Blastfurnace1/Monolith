@@ -20,7 +20,7 @@ import com.blastfurnace.otr.series.adapter.SeriesDataAdapter;
 import com.blastfurnace.otr.service.response.GenericResponse;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/rest/series")
 public class SeriesDataRestController {
 
 	@Autowired
