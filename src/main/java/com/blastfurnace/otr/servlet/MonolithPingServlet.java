@@ -9,7 +9,7 @@ import com.blastfurnace.otr.episode.service.EpisodeDataService;
 import com.blastfurnace.otr.service.response.GenericResponse;
 
 @WebServlet("/ping")
-public class EpisodePingServlet extends PingServlet {
+public class MonolithPingServlet extends PingServlet {
 	
 	/**
 	 * 
@@ -33,7 +33,7 @@ public class EpisodePingServlet extends PingServlet {
 		return "Episode Server - Status OK";
 	}
 
-	public EpisodePingServlet() {
+	public MonolithPingServlet() {
 		// TODO Auto-generated constructor stub
 	}
 
