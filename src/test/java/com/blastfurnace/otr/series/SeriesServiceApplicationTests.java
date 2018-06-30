@@ -71,18 +71,18 @@ public class SeriesServiceApplicationTests {
 		
 		@SuppressWarnings("rawtypes")
 		ResponseEntity<Map> entity = this.testRestTemplate.getForEntity(
-				"http://localhost:" + this.port + "/rest/get/1", Map.class);
+				"http://localhost:" + this.port + "/rest/series/get/1", Map.class);
 
 		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		
 		HttpHeaders httpHeaders = this.testRestTemplate
-				  .headForHeaders("http://localhost:" + this.port + "/rest/get/1");
+				  .headForHeaders("http://localhost:" + this.port + "/rest/series/get/1");
 		
 		assertTrue(httpHeaders.getContentType()
 				  .includes(MediaType.APPLICATION_JSON));
 		
 		SeriesDataWrapper series = this.testRestTemplate.getForObject(
-				"http://localhost:" + this.port + "/rest/get/1", SeriesDataWrapper.class);
+				"http://localhost:" + this.port + "/rest/series/get/1", SeriesDataWrapper.class);
 
 	}
 	
