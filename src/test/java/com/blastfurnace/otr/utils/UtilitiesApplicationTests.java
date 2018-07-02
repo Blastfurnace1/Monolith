@@ -31,6 +31,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.blastfurnace.otr.TestingAppConfig;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
@@ -39,35 +40,8 @@ import static org.assertj.core.api.BDDAssertions.then;
  *
  * @author Jim Blackson
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@TestPropertySource(properties = {"management.port=9001", "test.server="})
-public class UtilitiesApplicationTests {
+public class UtilitiesApplicationTests extends TestingAppConfig {
 
-	@LocalServerPort
-	private int port;
-
-	@Value("${local.management.port}")
-	private int mgt;
-
-	@Autowired
-	private TestRestTemplate testRestTemplate;
-	
-	/** local running instance of embedded tomcat visa-vis Spring. */
-	private String testServer = "http://localhost:";
-	
-	
-	
-	@Test
-	/** Make sure the server runs. */
-	public void shouldReturn200WhenSendingRequestToManagementEndpoint() throws Exception {
-		@SuppressWarnings("rawtypes")
-		ResponseEntity<Map> entity = this.testRestTemplate.getForEntity(
-				testServer + this.mgt + "/actuator/info", Map.class);
-
-		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-	}
-	
 	@Test
 	/** Test Data Access for Audio file Properties. */
 	public void shouldPerformActions() throws Exception {
