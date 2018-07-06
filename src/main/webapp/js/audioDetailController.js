@@ -5,9 +5,9 @@ function OTRDetailsCTRL($scope, $http, $routeParams, OTRAudioData, OTRFileServic
 	 	 $scope.$watch('otrItemRequest', function (newValue, oldValue, scope) {
 	 		$scope.otrItem = $scope.otrItemRequest.payload;
 	 		if (($scope.otrItem.audioSamplingRate > 0) == true) {
-	    		document.getElementById("otrPlayerDiv").innerHTML = "<audio id='otrPlayer' controls src='/otr-file-services/FileServer?id=" + $scope.fileId + "'> Your browser does not support the <code>audio</code> element.  </audio>";
+	    		document.getElementById("otrPlayerDiv").innerHTML = "<audio id='otrPlayer' controls src='/Monolith/FileServer?id=" + $scope.fileId + "'> Your browser does not support the <code>audio</code> element.  </audio>";
 	    	} else {
-	    		document.getElementById("otrPlayerDiv").innerHTML = "<a href='/otr-file-services/FileServer?id=" + $scope.fileId + "'><button>Download!</button></a>";
+	    		document.getElementById("otrPlayerDiv").innerHTML = "<a href='/Monolith/FileServer?id=" + $scope.fileId + "'><button>Download!</button></a>";
 	    	}
 	     }, true);
 	 	 

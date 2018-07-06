@@ -17,18 +17,18 @@
 // Define the REST resource service, allowing us to interact with it as a high level service
 angular.module('otrService', ['ngResource']).
     factory('OTRAudioData', function($resource){
-  return $resource('/otr-audio-data/rest/audio/:method/:id', {method: '@_method', id: '@_id'});
+  return $resource('/Monolith/rest/audio/:method/:id', {method: '@_method', id: '@_id'});
     }).factory('OTRAudioDataCount', function($resource){
-	  return $resource('/otr-audio-data/rest/audio/resultsCount/:id', {id: '@_id'});
+	  return $resource('/Monolith/rest/audio/resultsCount/:id', {id: '@_id'});
 	}).factory('OTRSeriesData', function($resource){
-	  return $resource('/otr-series-data/rest/series/:method/:id', {method: '@_method', id: '@_id'});
+	  return $resource('/Monolith/rest/series/:method/:id', {method: '@_method', id: '@_id'});
 	}).factory('OTRSeriesDataCount', function($resource){
-	  return $resource('/otr-series-data/rest/series/resultsCount/:id', {id: '@_id'});
+	  return $resource('/Monolith/rest/series/resultsCount/:id', {id: '@_id'});
 	}).factory('OTREpisodeData', function($resource){
-	  return $resource('/otr-episode-data/rest/:method/:id', {method: '@_method', id: '@_id'});
+	  return $resource('/Monolith/rest/:method/:id', {method: '@_method', id: '@_id'});
 	}).factory('OTREpisodeDataCount', function($resource){
-	  return $resource('/otr-episode-data/rest/episode/resultsCount/:id', {id: '@_id'});
+	  return $resource('/Monolith/rest/episode/resultsCount/:id', {id: '@_id'});
 	}).factory('OTRFileServices', function($resource){
-	  return $resource('/otr-file-services/rest/file/:method/:id', {method: '@_method', id: '@_id'});
+	  return $resource('/Monolith/rest/file/:method/:id', {method: '@_method', id: '@_id'});
 	});
 
