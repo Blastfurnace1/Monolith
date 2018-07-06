@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.blastfurnace.otr.api.response.GenericResponse;
 import com.blastfurnace.otr.data.audiofile.model.AudioFileProperties;
 import com.blastfurnace.otr.fileservice.adapter.FileDataAdapter;
-import com.blastfurnace.otr.service.response.GenericResponse;
 
 @RestController
 @RequestMapping("/rest/file")
