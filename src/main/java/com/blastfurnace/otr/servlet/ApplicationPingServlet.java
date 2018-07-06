@@ -10,7 +10,7 @@ import com.blastfurnace.otr.fileservice.service.FileDataService;
 import com.blastfurnace.otr.util.servlet.PingServlet;
 
 @WebServlet("/ping")
-public class FilePingServlet extends PingServlet {
+public class ApplicationPingServlet extends PingServlet {
 	
 	/**
 	 * 
@@ -34,7 +34,7 @@ public class FilePingServlet extends PingServlet {
 		return "File Server - Status OK";
 	}
 
-	public FilePingServlet() {
+	public ApplicationPingServlet() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -169,6 +169,34 @@
          <scope>test</scope>
       </dependency>
       
+      <!-- Files dependencies -->
+      <dependency>
+         <groupId>com.blastfurnace</groupId>
+         <artifactId>otr-api-rest-files</artifactId>
+         <version>0.2.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.blastfurnace</groupId>
+         <artifactId>otr-api-rest-files</artifactId>
+         <version>0.2.0</version>
+         <classifier>test</classifier>
+         <type>test-jar</type>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>com.blastfurnace</groupId>
+         <artifactId>otr-services-files</artifactId>
+         <version>0.2.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.blastfurnace</groupId>
+         <artifactId>otr-services-files</artifactId>
+         <version>0.2.0</version>
+         <classifier>test</classifier>
+         <type>test-jar</type>
+         <scope>test</scope>
+      </dependency>
+      
       <!-- Utils dependencies -->
       <!-- The code Jar -->
       <dependency>
@@ -197,7 +225,7 @@
    
    <profiles>
       <profile>
-         <id>dev</id>
+         <id>test</id>
          <activation>
             <activeByDefault>false</activeByDefault>
          </activation>
@@ -252,6 +280,8 @@
                   <artifactId>maven-surefire-plugin</artifactId>
                   <configuration>
                      <dependenciesToScan>
+                     	<dependency>com.blastfurnace:otr-api-rest-files</dependency>
+                        <dependency>com.blastfurnace:otr-services-files</dependency>
                         <dependency>com.blastfurnace:otr-api-rest-audio</dependency>
                         <dependency>com.blastfurnace:otr-audio-data</dependency>
                         <dependency>com.blastfurnace:otr-services-audio-data</dependency>
